@@ -1,0 +1,98 @@
+.journal__main-content{
+    display: flex;
+}
+.journal__sidebar{
+    background-color: $dark-grey;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-left: .8rem 0 .8rem 0;
+    width: 450px;
+
+}
+.journal__sidebar-navbar{
+    display: flex;
+    margin: 0rem .8rem;
+    justify-content: space-between;
+
+}
+
+.journal__name{
+    margin-left: .3rem;
+    font-weight: 400;
+}
+
+.journal__new-entry{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 2rem;
+    width: 100%;
+    transition: color .3s ease;
+    &:hover{
+        color: darken($color: #fff, $amount: 20);
+    }
+}
+.journal__entries{
+    margin-top: 1.8rem;
+    flex: 1 1 auto;
+    overflow-y: scroll;
+    
+}
+
+.journal__entry{
+    background-color: #fff;
+    border-radius: .3rem;
+    color: $dark-grey;
+    display: flex;
+    margin: .6rem;
+    overflow: hidden;
+    
+    justify-content: space-between;
+    transition: background-color .3s ease;
+    
+    &:hover{
+        background-color: darken($color: #fff, $amount: 20);
+    }
+}
+.journal__entry-picture{
+    height: 65px;
+    width: 65px;
+    
+}
+
+
+.journal__entry-title{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.journal__entry-content{
+    font-size: .8rem;
+    
+}
+.journal__entry-date-box  {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: .3rem;
+    font-size: .7rem;
+}
+
+/*========== SCROLL BAR ==========*/
+::-webkit-scrollbar{
+    width: .8rem;
+    
+    border-radius: .3rem;
+    
+    
+}
+::-webkit-scrollbar-thumb{
+    background-color: darken($color: #fff, $amount: 10);
+    border-radius: .5rem;
+    &:hover{
+        background-color: darken($color: #fff, $amount: 30);
+    }
+}

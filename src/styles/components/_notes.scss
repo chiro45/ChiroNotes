@@ -1,0 +1,54 @@
+.notes__main-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}   
+
+.notes__appbar{
+    display: flex;
+    align-items: center;
+    background-color: $primary;
+    color: #fff;
+    justify-content: space-between;
+    padding: .6rem 1.2rem;
+  
+}
+.notes__content{
+ display: flex;
+ flex-direction: column;
+ height: 100%;
+ padding: 1.4rem;
+
+}
+
+.notes__title-input, .notes__textarea{
+    
+    border: none;
+   
+    border-radius: .4rem;
+    padding: .3rem;
+    
+    &:focus{
+        outline: none;
+
+    }
+}
+
+.notes__title-input{
+    color: $dark-grey;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    
+}
+.notes__textarea{
+    font-size: 1.1rem;
+    
+    flex: 1 1 auto;
+    resize: none;
+}
+
+.notes__image img{
+    box-shadow: 5px 5px 10px $dark-grey;
+    height: 150px;
+}
