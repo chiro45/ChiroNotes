@@ -7,31 +7,33 @@ import { NoteAppBar } from './NoteAppBar';
 
 export const NoteScreen = () => {
 
-
+  //extraemos el active del state 
   const {active:note} = useSelector(state => state.notes)
-
+  // declaramos el dispatch
   const dispatch = useDispatch();
-  
+  //nos retorna un el id mutable
   const activeId = useRef(note.id)
-
+  //utilizamos el useForm y mandamos la nota como el intialState
   const [formValues, handleInputChange, reset]=useForm(note)
-
+  //el useEffect nos 
   useEffect(()=>{
-     
-   if(note.id !== activeId.current){
-     reset(note)
-     activeId.current = note.id
-   }
+          //si el id de la nota es diferente al actual
+        if(note.id !== activeId.current){
+          //resetea la nota
+          reset(note)
+          //y le cambiamos el id
+          activeId.current = note.id
+        }
 
   },[note, reset])
- 
+  //cuando se produzca un cambio en el formValues
   useEffect(()=>{
-     
+     //se produce el 
     dispatch(activeNote(formValues.id, {...formValues}))
  
    },[formValues , dispatch])
 
-
+   //desestructuramos los datos del formValue
   const {body, title, id} = formValues;
 
 

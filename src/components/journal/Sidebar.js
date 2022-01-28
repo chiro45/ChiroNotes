@@ -9,8 +9,9 @@ import { JournalEntries } from './JournalEntries';
 
 
 export const Sidebar = () => {
-
+ // declaramos el dispatch del redux
   const dispatch = useDispatch();
+  //extraemos el name del stores del state.auth
   const {name} = useSelector(state => state.auth);
   
   const handleLogout=()=>{
@@ -18,7 +19,7 @@ export const Sidebar = () => {
     dispatch(startLogout())
   }
 
-
+  //activa el disparo del tartnNewNote
   const handleAddNew = ()=>{
     dispatch(startNewNote())
     

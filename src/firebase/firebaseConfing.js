@@ -15,7 +15,7 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-
+// inidializamos la base de datos 
 const db = firebase.firestore();
 //autenticacion con google
 const googleAuthProvider =  new firebase.auth.GoogleAuthProvider();

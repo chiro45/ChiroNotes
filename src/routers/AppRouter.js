@@ -4,7 +4,6 @@ import {firebase} from '../firebase/firebaseConfing'
 import{
     BrowserRouter as Router,
     Switch,
-
     Redirect
     
 } from 'react-router-dom'
@@ -21,8 +20,9 @@ import { startLoadingNotes } from '../actions/notes'
 
 
 export const AppRouter = () => {
+    //declaramos el disparo
     const dispatch = useDispatch()
-
+    //hacemos un "cheking" => esto es para hacer handar el loadingScreen
     const [cheking, setCheking] = useState(true);
 
     const [isLoggedIn, setisLoggedIn] = useState(false);    //nos permite saber si esta autenticado o no
@@ -33,7 +33,7 @@ export const AppRouter = () => {
             if(user?.uid){ //evalua si existe el uid sino se sale
                 dispatch(login(user.uid, user.displayName))
                 setisLoggedIn(true)
-                
+                //hacemos el disparo para la carga de las notas
                 dispatch(startLoadingNotes(user.uid))
                
 
@@ -52,7 +52,8 @@ export const AppRouter = () => {
     return (
         //Router es un higth order compounten que 
         <Router>
-            <div>
+            <div>   
+               
             <Switch>
 
                 <PublicRoutes

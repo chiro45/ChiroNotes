@@ -4,23 +4,22 @@ import { startSaveNote, startUploading } from '../../actions/notes';
 import moment from 'moment'
 export const NoteAppBar = ({date}) => {
     const {active:note} = useSelector(state => state.notes)
-    const dispatch = useDispatch();
 
+    //declaramos el dispatch
+    const dispatch = useDispatch();
+    //evento que dispara el gurdarNote
     const handleSave =()=>{
         dispatch(startSaveNote(note))
     }
-
+    //obtenemos el bottton
     const handlePictureClick= () =>{
         document.getElementById('fileSelector').click()
-
-
-
-
     }
 
-
+    //evento que detecta que cambie
     const handleFileChange = (e)=>{
             const file = e.target.files[0];
+            //si el file existe emtonces se produce el disparo de actualizacion
             if (file){
                 dispatch(startUploading(file))
             }

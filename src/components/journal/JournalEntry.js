@@ -8,8 +8,10 @@ import { activeNote } from '../../actions/notes';
 export const JournalEntry = ({id,date,title,body,url}) => {
     const dispatch = useDispatch()
     const noteDate = moment(date);
-
+    //click event sobre alguna de las notas
     const handleEntryClick = ()=>{
+
+        //realizamos el disparo mandando el id y los demas datos de la nota
         dispatch(activeNote(id,{
             date,title,body,url
         })
@@ -20,12 +22,12 @@ export const JournalEntry = ({id,date,title,body,url}) => {
     return (
       <div className='journal__entry pointer animate__animated animate__fadeInRight animate__fast'
       onClick={handleEntryClick}>
-      { 
+      { //en el caso de que la nota tenga imagen entonces se muestra el div
           url &&
       <div className='journal__entry-picture'
       style={{
           backgroundSize:'cover',
-          backgroundImage:`url(${url}) || `,
+          backgroundImage:`url(${url})`,
       }}>
               
       </div>
