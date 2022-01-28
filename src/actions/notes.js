@@ -132,7 +132,7 @@ export const startDeleting = (id)=>{
 
         dispatch(deleteNote(id))
 
-        Swal.fire('Eliminado!','', "delete")
+        Swal.fire('Eliminado!','', "success")
     }
 }
 
