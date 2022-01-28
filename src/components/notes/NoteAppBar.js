@@ -31,7 +31,7 @@ export const NoteAppBar = ({date}) => {
   return (
     <div className='notes__appbar'>
   
-        <span>{moment().subtract(10, 'days').calendar()}</span>
+        <span className='appBar'>{moment().subtract(10, 'days').calendar()}</span>
         <input id='fileSelector'
                type='file'
                name='file'
@@ -39,10 +39,10 @@ export const NoteAppBar = ({date}) => {
                onChange={handleFileChange}
         />
         <div>
-            <button className='btn'
+            <button className='btn appBar'
             onClick={handlePictureClick}>Foto</button>
         
-            <button className='btn'
+            <button className='btn appBar'
             onClick={handleSave}>Guardar</button>
         </div>
     

@@ -1,7 +1,12 @@
+html{
+    overflow-x:hidden;
+}
+
 .notes__main-content{
     display: flex;
     flex-direction: column;
     height: 100%;
+    
 }   
 
 .notes__appbar{
@@ -9,9 +14,14 @@
     align-items: center;
     background-color: $primary;
     color: #fff;
-    justify-content: space-between;
-    padding: .6rem 1.2rem;
+    justify-content: center;
+   
   
+}
+.appBar{
+    font-weight: 500;
+    margin: .3rem;
+    font-size: 1.2rem;
 }
 .notes__content{
  display: flex;

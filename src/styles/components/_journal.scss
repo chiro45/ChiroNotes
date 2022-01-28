@@ -14,13 +14,18 @@
 .journal__sidebar-navbar{
     display: flex;
     margin: 0rem .8rem;
-    justify-content: space-between;
+    justify-content: center;
 
+}
+.journal__sidebar-navbar i{
+    align-items: center;
+    color: $primary;
 }
 
 .journal__name{
     margin-left: .3rem;
     font-weight: 400;
+    
 }
 
 .journal__new-entry{
@@ -39,6 +44,7 @@
     margin-top: 1.8rem;
     flex: 1 1 auto;
     overflow-y: scroll;
+    overflow-x: hidden;
     
 }
 
@@ -49,10 +55,10 @@
     display: flex;
     margin: .6rem;
     overflow: hidden;
-    
+    overflow-x: hidden;
     justify-content: space-between;
     transition: background-color .3s ease;
-    
+    height: 65px;
     &:hover{
         background-color: darken($color: #fff, $amount: 20);
     }
