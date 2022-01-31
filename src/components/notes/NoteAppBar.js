@@ -30,7 +30,7 @@ export const NoteAppBar = ({date}) => {
   return (
     <div className='notes__appbar'>
   
-        <span className='appBar'>{moment().subtract(10, 'days').calendar()}</span>
+        <span className='appBar'> <i className="fas fa-calendar-day"></i>  {moment().format('L')}</span>
         <input id='fileSelector'
                type='file'
                name='file'

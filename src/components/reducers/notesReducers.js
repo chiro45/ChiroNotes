@@ -18,11 +18,13 @@ export const noteReducer = (state = intialState, action)=>{
          case types.notesAddNew:
          return{
                 ...state,
+                //carga la nueva nota y retorna las existentes
                 notes:[action.payload,...state.notes]
          }
          case types.notesActive:
          return {
             ...state,   
+            //retorna la nota activa con su carga util
             active:{
                 ...action.payload
 
@@ -31,6 +33,7 @@ export const noteReducer = (state = intialState, action)=>{
          case types.notesLoad:
              return{ 
                 ...state,
+                //carga las notas
                 notes:[...action.payload]
              }
         case types.notesUpdated:      //cuando se updatea

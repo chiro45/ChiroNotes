@@ -20,6 +20,7 @@ export const startLoginEmailPassword = (email,password)=>{
 
             dispatch(login(user.uid, user.displayName))
             
+            
         dispatch(finishLoading())
 
         })
@@ -57,21 +58,27 @@ export const startGoogleLogin = ()=>{
        .then(({ user })=>{
 
            dispatch(
-               login(user.uid, user.displayName)
-            )
-        
-       })
+               login(user.uid, user.displayName, user.photoURL),
+
+               console.log(user.photoURL)
+                 
+               )
+            })
+            
+       
+       
        
     }
 }
 
 
-export const login = (uid, displayName)=>{
+export const login = (uid, displayName, photoURL)=>{
         return{
             type: types.login,
             payload: {
                 uid,
-                displayName
+                photoURL,
+                displayName,
             }
         }
 }

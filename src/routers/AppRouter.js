@@ -31,7 +31,7 @@ export const AppRouter = () => {
     useEffect(()=>{
         firebase.auth().onAuthStateChanged( async(user)=>{ // el observable detecta el cambio en el auth
             if(user?.uid){ //evalua si existe el uid sino se sale
-                dispatch(login(user.uid, user.displayName))
+                dispatch(login(user.uid, user.displayName, user.photoURL))
                 setisLoggedIn(true)
                 //hacemos el disparo para la carga de las notas
                 dispatch(startLoadingNotes(user.uid))
@@ -50,7 +50,7 @@ export const AppRouter = () => {
         )
     }
     return (
-        //Router es un higth order compounten que 
+         
         <Router>
             <div>   
                

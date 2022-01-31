@@ -25,9 +25,24 @@
 .journal__name{
     margin-left: .3rem;
     font-weight: 400;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
     
 }
-
+.journal__img{
+   height: 40px;
+   width: 40px;
+   font-size: 2rem;
+   border-radius: 4rem;
+   
+}
+.journal__containerName{
+    display: flex;
+    text-align: center;
+    margin-top: 1rem;
+    
+}
 .journal__new-entry{
     display: flex;
     flex-direction: column;

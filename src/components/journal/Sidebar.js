@@ -12,7 +12,13 @@ export const Sidebar = () => {
  // declaramos el dispatch del redux
   const dispatch = useDispatch();
   //extraemos el name del stores del state.auth
-  const {name} = useSelector(state => state.auth);
+  const {name , photoURL} = useSelector(state => state.auth);
+
+
+  const state = useSelector(state => state);
+  console.log(state)
+  
+ 
   
   const handleLogout=()=>{
 
@@ -29,10 +35,15 @@ export const Sidebar = () => {
   <aside className='journal__sidebar '>
 
       <div className='journal__sidebar-navbar '>
-          <h3 className='marginTop-5'>
+          <div className='journal__containerName'>
           
-          <span className='journal__name'><i className="fas fa-user"></i> {name}</span>
-          </h3>
+          {
+             (photoURL)
+              ? <div >  <img className='journal__img' src={photoURL}/> <p className='journal__name'>{name}</p></div>
+              : <div >  <i className=" journal__img fas fa-user"></i> <p className='journal__name'>{name}</p></div>
+              // : <span className='journal__name'>   {name}</span>
+          }
+          </div>
       </div>
 
       <div className='journal__new-entry'
