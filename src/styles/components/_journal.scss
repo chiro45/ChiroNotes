@@ -117,3 +117,23 @@
         background-color: darken($color: #fff, $amount: 30);
     }
 }
+.notes__nav-toggle{
+    display: none;
+}
+
+@media  screen and (max-width: 568px){
+    .hidden{
+        display: none;
+    }
+    .notes__nav-toggle{
+        display:block;
+        cursor: pointer;
+        
+    }
+    
+
+    
+    
+}
+
+

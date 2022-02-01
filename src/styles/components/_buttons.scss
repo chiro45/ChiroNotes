@@ -108,3 +108,11 @@
         background: $button-active-blue;
     }
 }
+
+@media screen and(max-width: 568px) {
+    .btn-danger{
+        width: 300px;
+        margin-top: 5rem;
+
+    }
+}

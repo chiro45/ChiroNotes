@@ -1,5 +1,7 @@
 import React from 'react';
 import moment from 'moment'
+import PropTypes from 'prop-types';
+
 
 import 'moment/locale/es'
 import { useDispatch } from 'react-redux';
@@ -49,3 +51,13 @@ export const JournalEntry = ({id,date,title,body,url}) => {
       </div>
   )
 };
+
+
+
+JournalEntry.propTypes ={
+    id: PropTypes.string,
+    date: PropTypes.number,
+    title: PropTypes.string,
+    body: PropTypes.string,
+    url: PropTypes.string
+}

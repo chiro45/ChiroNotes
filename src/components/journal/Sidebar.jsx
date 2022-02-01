@@ -16,7 +16,7 @@ export const Sidebar = () => {
 
 
   const state = useSelector(state => state);
-  console.log(state)
+ 
   
  
   
@@ -32,7 +32,7 @@ export const Sidebar = () => {
   }
   
   return (
-  <aside className='journal__sidebar '>
+  <aside className='journal__sidebar ' id='sidebar'>
 
       <div className='journal__sidebar-navbar '>
           <div className='journal__containerName'>
