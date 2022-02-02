@@ -24,23 +24,25 @@ export const NoteAppBar = ({date}) => {
                 dispatch(startUploading(file))
             }
     }
+
     const handleNav = ()=>{
 
        
         const  nav = document.getElementById('sidebar')
         const  navT = document.getElementById('navT')
         const  navT2 = document.getElementById('navT2');
+
         if(!nav.classList.contains('hidden')){
 
             nav.classList.add('hidden') 
             navT.classList.add('hidden') 
             navT2.classList.remove('hidden');
-            console.log('entre')
+            
         }else{
             navT.classList.remove('hidden') 
             nav.classList.remove('hidden');
             navT2.classList.add('hidden');
-            console.log('sali')
+            
         }
 
         
