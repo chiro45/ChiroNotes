@@ -26,19 +26,23 @@ export const NoteAppBar = ({date}) => {
     }
     const handleNav = ()=>{
 
-        console.log('aca')
-       const nav = document.getElementById('sidebar');
-        (!nav.classList.contains('hidden'))
-            ? nav.classList.add('hidden') 
-            : nav.classList.remove('hidden')
+       
+        const  nav = document.getElementById('sidebar')
+        const  navT = document.getElementById('navT')
+        const  navT2 = document.getElementById('navT2');
+        if(!nav.classList.contains('hidden')){
 
+            nav.classList.add('hidden') 
+            navT.classList.add('hidden') 
+            navT2.classList.remove('hidden');
+            console.log('entre')
+        }else{
+            navT.classList.remove('hidden') 
+            nav.classList.remove('hidden');
+            navT2.classList.add('hidden');
+            console.log('sali')
+        }
 
-        const  navT = document.getElementById('navT'),
-               navT2 = document.getElementById('navT2')
-
-               (!navT.classList.contains('hidden'))
-                   ? navT.classList.add('hidden') 
-                   : navT2.classList.remove('hidden')
         
 
     }
@@ -49,8 +53,8 @@ export const NoteAppBar = ({date}) => {
         <div 
         className='notes__nav-toggle'
         onClick={handleNav}>
-            <span className='nav-toggle hidden appBar' id='navT'><i className="fas fa-bars"></i></span>
-            <span className='nav-toggle appBar' id='navT2'><i className="far fa-window-close"></i></span>
+            <span className='nav-toggle appBar' id='navT'><i className=" fas fa-times "></i></span>
+            <span className='nav-toggle appBar hidden' id='navT2'><i className="fas fa-bars"></i></span>
         </div>
         <span className='appBar'> <i className="fas fa-calendar-day"></i>  {moment().format('L')}</span>
         <input id='fileSelector'

@@ -65,9 +65,19 @@ html{
 
 
 @media  screen and (max-width: 568px){
-    
+    .hidden{
+        display: none;
+    }
     .notes__appbar{
        justify-content:space-around;
      
+    }
+    .notes__textarea{
+        font-size: 1.1rem;
+        
+        flex: 1 1 auto;
+        resize: none;
+
+        height: 200px;
     }
 }
