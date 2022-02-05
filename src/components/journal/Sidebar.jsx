@@ -15,7 +15,6 @@ export const Sidebar = () => {
   const {name , photoURL} = useSelector(state => state.auth);
 
 
-  const state = useSelector(state => state);
  
   
  

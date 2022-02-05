@@ -11,10 +11,12 @@ import { noteLogout} from './notes'
 
 
 export const startLoginEmailPassword = (email,password)=>{
-    return(dispatch)=>{
+    return (dispatch)=>{
         
         dispatch(startLoading())
-        firebase.auth().signInWithEmailAndPassword(email,password)
+
+
+         firebase.auth().signInWithEmailAndPassword(email,password)
         .then( ({ user }) =>{
 
 
@@ -29,8 +31,8 @@ export const startLoginEmailPassword = (email,password)=>{
     })
 }}
 export const startRegisterWhithEmailPasswordName = (email,password, name)=>{
-    return(dispatch)=>{
-        firebase.auth().createUserWithEmailAndPassword(email,password)
+    return async(dispatch)=>{
+        return firebase.auth().createUserWithEmailAndPassword(email,password)
         .then( async({ user })=>{
 
             await user.updateProfile({
@@ -60,7 +62,6 @@ export const startGoogleLogin = ()=>{
            dispatch(
                login(user.uid, user.displayName, user.photoURL),
 
-               console.log(user.photoURL)
                  
                )
             })

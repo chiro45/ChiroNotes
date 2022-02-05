@@ -5,8 +5,7 @@ html{
 .notes__main-content{
     display: flex;
     flex-direction: column;
-    
-    
+    height: 100%;
 }   
 
 .notes__appbar{
@@ -32,7 +31,7 @@ html{
 }
 
 .notes__title-input, .notes__textarea{
-    
+    color: $dark-grey;
     border: none;
    
     border-radius: .4rem;
@@ -52,8 +51,8 @@ html{
     
 }
 .notes__textarea{
+    color: $dark-grey;
     font-size: 1.1rem;
-    
     flex: 1 1 auto;
     resize: none;
 }
@@ -64,24 +63,3 @@ html{
 }
 
 
-@media  screen and (max-width: 568px){
-    .hidden{
-        display: none;
-    }
-    .notes__appbar{
-        display: flex;
-        flex-direction:row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        
-      
-    }
-    .notes__textarea{
-        font-size: 1.1rem;
-        
-        flex: 1 1 auto;
-        resize: none;
-
-        height: 200px;
-    }
-}

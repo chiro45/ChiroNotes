@@ -14,10 +14,10 @@ export const RegisterScreen = () => {
     const {msgError} = useSelector(state=>state.ui)
 
     const [formValues, handleInputChange] = useForm({           //utilizamos el coustomHook para el manejo del formulario 
-        name: '',                                               //declaramos el initialState
-        email: '',
-        password: '',
-        password2: '',
+        name: 'fernando',                                               //declaramos el initialState
+        email: 'fernando@gmail,cim',
+        password: '123123',
+        password2: '123123',
     });
 
     const {name, email , password, password2} = formValues;     //desestructuracion de los datos

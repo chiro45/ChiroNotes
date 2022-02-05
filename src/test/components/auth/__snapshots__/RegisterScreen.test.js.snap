@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <RegisterScreen/> debe de mostrarase correctamente 1`] = `
+<div>
+  <h3
+    className="auth__title"
+  >
+    ChiroNotes 
+    <i
+      className="  far fa-edit"
+    />
+  </h3>
+  <form
+    className="animate__animated animate__fadeIn animate__faster"
+    onSubmit={[Function]}
+  >
+    <input
+      autoComplete="off"
+      className="auth__input"
+      name="name"
+      onChange={[Function]}
+      placeholder="Nombre"
+      type="text"
+    />
+    <input
+      autoComplete="off"
+      className="auth__input"
+      name="email"
+      onChange={[Function]}
+      placeholder="Email"
+      type="text"
+    />
+    <input
+      className="auth__input"
+      name="password"
+      onChange={[Function]}
+      placeholder="Contraseña"
+      type="text"
+    />
+    <input
+      className="auth__input"
+      name="password2"
+      onChange={[Function]}
+      placeholder="Confirma tu Contraseña"
+      type="text"
+    />
+    <button
+      className="btn btn-primary btn-block marginBottom-5"
+      type="submit"
+    >
+      Registrarse 
+      <i
+        className=" icons fa fa-sign-in-alt"
+      />
+    </button>
+    <a
+      className="link "
+      href="/auth/login"
+      onClick={[Function]}
+    >
+      ¿Ya te has Registrado?
+    </a>
+  </form>
+</div>
+`;

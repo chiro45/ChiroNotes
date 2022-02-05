@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el <NoteScreen/> debe de mostrarse correctamente 1`] = `
+<div
+  className="notes__main-content animate__animated animate__fadeInRight animate__fast"
+>
+  <div
+    className="notes__appbar"
+  >
+    <div
+      className="notes__nav-toggle"
+      onClick={[Function]}
+    >
+      <span
+        className="nav-toggle appBar"
+        id="navT"
+      >
+        <i
+          className=" fas fa-times "
+        />
+      </span>
+      <span
+        className="nav-toggle appBar hidden"
+        id="navT2"
+      >
+        <i
+          className="fas fa-bars"
+        />
+      </span>
+    </div>
+    <span
+      className="appBar"
+    >
+       
+      <i
+        className="fas fa-calendar-day"
+      />
+        
+      02/05/2022
+    </span>
+    <input
+      id="fileSelector"
+      name="file"
+      onChange={[Function]}
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+      type="file"
+    />
+    <div>
+      <button
+        className="btn appBar"
+        onClick={[Function]}
+      >
+        Foto
+      </button>
+      <button
+        className="btn appBar"
+        onClick={[Function]}
+      >
+        Guardar
+      </button>
+    </div>
+  </div>
+  <div
+    className="notes__content "
+  >
+    <input
+      autoComplete="off"
+      className="notes__title-input"
+      name="title"
+      onChange={[Function]}
+      placeholder="Agrega un titulo"
+      type="text"
+      value="title"
+    />
+    <textarea
+      className="notes__textarea"
+      name="body"
+      onChange={[Function]}
+      placeholder="Qué paso hoy?"
+      value="body"
+    />
+  </div>
+  <button
+    className="btn btn-danger"
+    onClick={[Function]}
+  >
+    Borrar Nota
+  </button>
+</div>
+`;
