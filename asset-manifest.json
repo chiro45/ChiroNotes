@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/ChiroNotes/static/css/main.e499c6fb.css",
-    "main.js": "/ChiroNotes/static/js/main.97b30b60.js",
+    "main.css": "/ChiroNotes/static/css/main.7fce9f65.css",
+    "main.js": "/ChiroNotes/static/js/main.bc84941b.js",
     "static/media/pattern.png": "/ChiroNotes/static/media/pattern.5b14322b55d74b43fe1a.png",
     "index.html": "/ChiroNotes/index.html",
-    "main.e499c6fb.css.map": "/ChiroNotes/static/css/main.e499c6fb.css.map",
-    "main.97b30b60.js.map": "/ChiroNotes/static/js/main.97b30b60.js.map"
+    "main.7fce9f65.css.map": "/ChiroNotes/static/css/main.7fce9f65.css.map",
+    "main.bc84941b.js.map": "/ChiroNotes/static/js/main.bc84941b.js.map"
   },
   "entrypoints": [
-    "static/css/main.e499c6fb.css",
-    "static/js/main.97b30b60.js"
+    "static/css/main.7fce9f65.css",
+    "static/js/main.bc84941b.js"
   ]
 }
