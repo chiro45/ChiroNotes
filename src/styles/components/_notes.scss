@@ -60,6 +60,22 @@ html{
 .notes__image img{
     box-shadow: 5px 5px 10px $dark-grey;
     height: 150px;
+    border-radius: .4rem;
+    margin-left: 4rem;
 }
 
+@media screen and (max-width: 568px) {
+    
+    .notes__appbar{
+        align-items: center;
+       
+        justify-content: flex-start;
 
+        flex-direction: column;
+       
+      
+    }
+    
+    
+    
+}

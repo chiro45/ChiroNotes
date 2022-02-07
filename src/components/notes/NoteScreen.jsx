@@ -82,11 +82,13 @@ export const NoteScreen = () => {
 
         </div>
      
+
+        <div className='journal__containerButton'>
           <button 
           className='btn btn-danger'
           onClick={handleDelete}
           >Borrar Nota</button>
-        
+        </div>
     </div>
   );
 };
