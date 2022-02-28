@@ -69,16 +69,19 @@ export const NoteScreen = () => {
                   >
                 </textarea>
 
-               {
-                  (note.url) &&
-                  <div className='notes__image'>
-                  <img
-                  src={note.url}
-                  alt='imagen'
-
-                  ></img>
+               
+                 <div className='notes__image'>
+                  {
+                    note.url &&
+                     <img
+                    src={note.url}
+                    alt='imagen'
+                     />
+                   
+                  }
                 </div>
-                } 
+
+                
 
         </div>
      
